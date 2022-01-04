@@ -1,0 +1,878 @@
+            /* ------------------header---------------------------- */
+.header{
+  
+    min-height: 10rem;
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    z-index: 99999;
+    background-color: rgba(0,0,0,0.12) ;
+
+    /* flex */
+    justify-content: space-between;
+    padding: 0 5rem;
+
+}
+.header__wrap{
+    /* flex */
+    flex: 1;
+  
+}
+.header__logo{
+    max-width: 20rem;
+    padding: 0 1.5rem;
+    cursor: pointer;
+   
+}
+.header__nav{
+    flex: 1;
+    justify-content: flex-start;
+}
+.header__item{
+    position: relative;
+}
+
+.header__item-link {
+    display: block;
+
+    padding: 1.5rem 2.5rem;
+    font-size: 1.4rem;
+    
+    color: var(--white-color);
+    text-transform: uppercase;
+}
+.header__button.butt{
+    --width-butt:12.5rem;
+    --height-butt: 3.8rem;
+    --background-color-butt:var( --mediumorchid);
+    --color-butt:var( --white-color);
+
+    margin-left: 2.5rem;
+}
+.header__menu{
+    color:var(  --snow-color);
+}
+
+.menu__icons{
+    font-size: 2.5rem;
+    padding: 0 1.5rem;
+    cursor: pointer;
+}
+/* --------------sub-nav--------------------------------------- */
+    /* adjust space of sub-nav */
+.sub-nav-child__tour-package{
+    --top-sub-nav-child:40%;
+    top: var(--top-sub-nav-child);
+}
+.sub-nav-child__about-us{
+    --top-sub-nav-child:78%;
+    top: var(--top-sub-nav-child);
+}
+.sub-nav-child__contact{
+    --top-sub-nav-child:89%;
+    top: var(--top-sub-nav-child);
+}
+.sub-nav__single-post{
+    --top-sub-nav-child:50%;
+    top: var(--top-sub-nav-child);
+}
+/* -----------------------hover to show sub navigation----------------------------- */
+
+.header__item:hover > .sub-nav{
+    display: block;
+}
+
+.sub-nav__item:hover .sub-nav-child{
+    display: block;
+}
+/* -----------------------menu-icon-header----------------------------- */
+
+.header__menu{
+    display: table;
+    clear: both;
+    position: relative;
+}
+input.show-menu:checked ~ .modal{
+    display: block;
+}   
+input.show-menu:checked  ~ .menu-expand{
+    display: block;
+    transform: translateX(0);
+}
+.heder__menu-close-icon{
+    color: var(--darkgray-color);
+    
+    font-size: 2.5rem;
+    padding: 1rem;
+   
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.menu-expand {
+    width: 25vw;
+    height: 100vh;
+    
+    padding: 2rem 1.5rem 0;
+    
+    overflow: scroll;
+    background-color: var(--white-color);
+    
+    position: fixed;
+    top:0;
+    right:0;
+    z-index: 9999;
+
+    transform: translateX(100%);
+
+    transition: all linear 0.4s;  
+}
+
+.menu-expand::-webkit-scrollbar {
+   width: 1rem;
+} 
+
+.menu-expand::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+.menu-expand::-webkit-scrollbar-thumb {
+    background: #ddd; 
+  }
+.menu-expand__heading{
+    text-align: center;
+    
+}
+
+.menu-expand__heading-description{
+    font-size: 1.4rem;
+    color: var( --darkgray-color);
+}
+
+.menu-expand__heading-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1;
+    margin: 1rem 0 3.5rem;
+    color: var(--dimgray-color);
+}
+/* ---------------the line over-line the heading on menu----------------------- */
+
+.over-line-packages::after {
+ 
+    background-color: var( --gold-color);
+}
+
+.over-line-minutes::after {
+    background-color:var(--sandybrown-color);
+}
+/* -------------------------------------------------------------------------------------- */
+.menu-expand__item {
+    padding: 1.5rem;
+    align-items: flex-start;
+}
+
+.menu-expand__item-img{
+    width: 10rem;
+    margin-right: 3rem;
+}
+
+.menu-expand__content{
+    flex:1;
+}
+
+
+/* ------------button price tickets place---------------------- */
+.menu-expand__butt-euro{
+    background: linear-gradient(to right, #ffd205 0%, #ff9b05 100%);
+}
+
+.menu-expand__butt-hong-kong{
+    background: linear-gradient(to right, #f76570 0%, #f78d65 100%);
+}
+
+.menu-expand__butt-san-fran{
+    background: linear-gradient(to right, #ba71da 0%, #da717b 100%);
+}
+
+.menu-expand__butt-tuscany{
+    background: linear-gradient(to right, #1bbc9b 0%, #1bbc63 100%);
+
+}
+
+.menu-expand__butt-amsterdam{
+    background: linear-gradient(to right, #f3a46b 0%, #f3c96b 100%);
+}
+
+.menu-expand__butt-phuket{
+    background: linear-gradient(to right, #14b9d5 0%, #14d5b1 100%);
+}
+
+/* -------------------card-header-menu---------------------------------- */
+
+.card__header-menu{
+    margin: 3.5rem 1.5rem;
+}
+/*  ----------------- slider__1-OUR DESTINATIONS  ----------------------------- */ 
+
+.slider-search__img{
+   
+    padding-top: 65%;
+   
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    position: relative;
+
+}
+.slider-search__wrap{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50% , -50%);
+    
+    text-align: center;
+}
+.slider-search-heading{
+   
+}
+
+.slider-search__title {
+    color: var(--white-color);
+}
+
+.heading__title-over-line::after {
+    background-color: var(--mediumorchid);
+}
+
+.slider-search__description{
+    color: var(--white-color);
+    margin: 3.5rem 0 6.5rem;
+}
+
+.slider-search__cover{
+     width:35rem;
+     margin: 0 auto 6.5rem;
+     padding: 0 3rem;
+   
+     --height-butt:4.5rem;
+    --background-color-butt: var(--white-color);
+    --color-butt: var(--darkgray-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    perspective: 500px;
+    perspective-origin: bottom;
+
+}
+
+.slider-search__input{
+    flex-grow: 1;
+    text-align: left;
+
+    text-transform: none;
+    font-weight: 400;
+    opacity: 0.6;
+
+    z-index: 9999;
+}
+.slider__search-icon{
+    font-size: 1.6rem;
+}   
+
+/*  ----------------- search input table  ----------------------------- */
+.slider-search__input:focus~.slider-search__input-list{
+    transform: rotateX(0deg);
+}
+
+.slider-search__input-list{
+    --gap-column: 3rem;
+
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+
+    width: 100%;
+    border: 0.5px solid var(--darkgray-color);
+
+    text-align: left;
+    text-transform: capitalize;
+    background-color: var(--white-color);
+
+    transform: rotateX(-90deg);
+    transform-origin: top;
+
+    
+    transition: transform linear 0.2s;
+
+}
+.slider-search__input-item:hover{
+    background-color: var(--darkturquoise-color);
+    color: var(--white-color);
+}
+
+.slider-search__input-link{
+    display: block;
+    padding:0.5rem 2rem ;
+}
+
+/* --------------------------------------------------------------------- */
+
+.slider-search__list{
+  
+    width: 60rem;
+    max-width: 100%;
+    margin: 0 auto;
+    z-index: 9999;
+    --number-column: 4;
+
+    color: var(--white-color);
+
+}
+
+.slider-search__featured{
+
+    padding: 2rem;
+    background-color: rgba(0,0,0,0.25);
+    cursor: pointer;
+
+}
+
+.slider-search__logo{
+    width: 4rem;
+
+}
+
+.slider-search__name-logo{
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    margin-top: 1rem;
+
+}
+
+/*  ----------------- content__1-OUR DESTINATIONS  ----------------------------- */
+
+.list-places{
+    padding:7.6rem;
+}
+
+.list-places__heading{
+    margin-bottom: 4.8rem;
+    text-align: center;
+}
+
+.list-places___description{
+    font-size: 1.4rem;
+    color: var(--darkgray-color);
+}
+
+.list-places___title{
+    font-size: 3.6rem;
+    color: var(--dimgray-color);
+
+}
+
+.over-line-destinations::after{
+    background-color: var( --lightseagreen);
+}
+
+/*  ----------------- slider__2  ----------------------------- */
+
+
+.slider-introduce__img{
+    padding-top: 16%;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: relative;
+
+}
+
+.slider-introduce__wrap{
+    padding: 0 7.45rem;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ 
+    justify-content: space-evenly;
+
+    margin: 0 -4rem;
+}
+
+.slider-introduce__title{
+    display: block;
+    color: var(--white-color);
+}
+
+.over-line-holiday::after{
+    --width-over-line-title: 20rem;
+    background-color: var(--salmon-color);
+}
+.slider-introduce__butt{
+   
+    width: 24rem;
+
+    --height-butt:4.5rem;
+    --color-butt:var( --salmon-color);
+}   
+/* --------------place-special--------------------------------------- */
+
+.place-special{
+    padding: 7.5rem 0;
+}
+.place-special__wrap{
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+.place-special__content{
+    flex-basis: 35%;
+    padding: 2rem 3.5rem 2rem 1.5rem;
+
+}
+.place-special__description {
+    color: var(--darkgray-color);
+    font-size: 1.4rem;
+}
+
+.place-special__title {
+    font-size: 3.6rem;
+    color: var(--dimgray-color);
+    margin: 0;
+}
+
+.over-line-beachs::after{
+    --width-over-line-title: 16.5rem;
+    bottom: 1.2rem;
+    background-color: var(--darkturquoise-color);
+}
+.place-special__paragraph {
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+    line-height: 2.7rem;
+   
+    text-align: justify;
+    margin: 3rem 0;
+    
+    color: var(--darkgray-color);
+}
+
+.place-special__price-old {
+    font-size: 3rem;
+    text-decoration: line-through;
+    
+    color: var(--gainsboro-color);
+}
+.place-special__price-new {
+    font-size: 3rem;
+    margin: 0 1.2rem;
+   
+    color: var(--dimgray-color);
+}
+.place-special__price-unit {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: var(--dimgray-color);
+}
+.place-special__butt {
+    --height-butt: 4.5rem;
+    --width-butt: 16rem;
+    margin-top: 2.2rem;
+    background-color: var(--lightseagreen);
+}
+.place-special__show{
+ flex-basis: 65%;
+ padding: 2rem 1rem 2rem 3.5rem;
+
+ position: relative;
+
+}
+.place-special__img{
+    
+    padding-top: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+   
+
+    position: relative;
+
+}
+
+.place-special__time{
+    
+    z-index: 99999;
+    --number-column: 4;
+    --gap-column: 1rem;
+    position: absolute;
+    bottom: -3.5rem;
+    left: 52%;
+    transform: translateX(-50%);
+
+    background-color: var( --darkturquoise-color);
+    
+}
+.place-special__time-item{
+    text-align: center;
+    padding: 3rem;
+    position: relative;
+}
+.place-special__time-divide::after {
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 0;
+    width: 0.3rem;
+    height: 5rem;
+    transform: rotateZ(12deg);
+    background-color: var(--lightseagreen-color);
+}
+
+.place-special__time-number {
+    font-size: 3.5rem;
+    letter-spacing: 0.1rem;
+    line-height: 3.5rem;
+   
+    color: var(--white-color);
+  
+}
+.place-special__time-word {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: var(--white-color);
+}
+
+.introduce-place__item{
+    align-items: flex-start;
+
+}
+
+.introduce-place__img{
+    width: 5rem;
+}
+
+.introduce-place__content{
+    margin-left: 2rem;
+
+}
+
+.introduce-place__title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    
+    color: var( --dimgray-color);
+}
+
+.introduce-place__view {
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+    color: var(--darkturquoise-color);
+}
+
+ /*  ----------------- slider__3  ----------------------------- */ 
+
+ .discover-place{
+    --number-column: 2;
+    --gap-column: 0;
+
+    padding: 8rem 0;
+ }
+ 
+ .discover-place__img{
+    padding-top: 40%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+   position: relative;
+
+ }
+
+ .discover-place__wrap{
+     width: 100%;
+     
+    position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+
+     text-align: center;
+
+
+ }
+ .discover-place__description {
+    font-size: 1.4rem;
+    color: var(--white-color);
+
+ }
+ .discover-place__title{
+    font-size: 3.6rem;
+    color: var(--white-color);
+
+ }
+ .discover-place__button {
+    margin: 3rem auto 0;
+    --height-butt:4.5rem;
+}
+.discover-place__button--organ{
+    color: var(--sandybrown-color);
+}
+.discover-place__button--green{
+    color: var( --lightseagreen);
+}
+
+/*  ----------------- content__3 OUR DESTINATIONS buy tickets ----------------------------- */
+
+.list-tickets__heading{
+    text-align: center;
+
+}
+.list-tickets__description {
+    font-size: 1.4rem;
+    color: var(--darkgray-color);
+}
+.list-tickets__title {
+    font-size: 3.6rem;
+    color: var(--dimgray-color);
+}
+.over-line-tickets-packages::after{
+    background-color: var( --lightseagreen);
+}
+
+.list-tickets__wrap{
+   margin-top: 6rem;
+   margin-bottom: 7.5rem;
+}
+.list-tickets__img{
+    width: 100%;
+}
+.list-tickets__content{
+    padding: 3rem;
+
+    border: 1px solid var(--whitesmoke-color);
+    position: relative;
+}
+.list-tickets__content-logo-wrap {
+    z-index: 9999;
+    position: absolute;
+    top: -25px;
+    right: 25px;
+    padding: 1.2rem;
+    border-radius: 50%;
+}
+
+.list-tickets__content-logo{
+    width: 2.6rem;
+}
+.list-tickets__content-top{
+    cursor: pointer;
+}
+.list-tickets__content-country{   
+     font-weight: 700;
+    color: var(--dimgray-color);
+}
+
+.list-tickets__content-place{
+    letter-spacing: 0.2rem;
+}
+
+.list-tickets__content-body {
+    justify-content: space-between;
+    
+    border-top: 1px solid var(--whitesmoke-color);
+    border-bottom: 1px solid var(--whitesmoke-color);
+    padding: 1.5rem 0;
+}
+
+.list-tickets__content-body-word {
+    font-size: 1.3rem;
+    color: var(--dimgray-color);
+    letter-spacing: 0.2rem;
+
+    text-transform: uppercase;
+}
+
+.list-tickets__content-body-quantity {
+    padding: 0 1rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    color: var(--white-color);
+  
+}
+/*  ----------------- color, logo and button different color  ----------------------------- */
+.span-butt--yellow{
+    background-color: var(--gold-color);
+}
+.span-butt--pink{
+    background-color: var(--salmon-color);
+}
+.span-butt--purple{
+    background-color: var(--mediumorchid-color);
+}
+
+.logo-wrap--yellow {
+    background: linear-gradient(to right, #ffd205 0%, #ff9b05 100%);
+
+}
+.logo-wrap--pink {
+    background: linear-gradient(to right, #f76570 0%, #f78d65 100%);
+
+}
+.logo-wrap--purple {
+    background: linear-gradient(to right, #ba71da 0%, #da717b 100%);
+
+}
+
+
+
+/*  ----------------- ----------------------------------  ----------------------------- */
+
+.list-tickets__content-body-old-price {
+    font-size: 2rem;
+    color: var(--dimgray-color);
+    text-decoration: line-through;
+}
+
+.list-tickets__content-body-new-price {
+    font-size: 2.5rem;
+    color: var(--dimgray-color);
+   
+    margin-left: 0.8rem;
+}
+
+.list-tickets__content-button{
+    --width-butt:10rem;
+    --height-butt:4rem;
+    --background-color-butt:var(--gold-color);
+    --color-butt:var(--white-color);
+}
+/*  ----------------- footer  ----------------------------- */ 
+
+.footer__img{
+    padding-top: 50%;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+}
+
+.footer__wrap{
+    z-index: 9999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+
+}
+.footer__top{
+    /* justify-content: space-evenly; */
+}
+
+.footer__top-heading{
+  flex-basis: 30%;
+  margin-right: 8rem;
+}
+.footer__top-description {
+    font-size: 1.4rem;
+    color: var(--darkgray-color);
+}
+.footer__top-title {
+    font-size: 3.6rem;
+    color: var(--dimgray-color);
+}
+.footer__form{
+    flex-basis: 30%;
+}
+.footer__form-input{
+    --width-butt:26rem;
+    --height-butt:4.5rem;
+    --background-color-butt:var(--white-color);
+    --color-butt: var(--black-color);
+    
+    text-align: left;
+    margin-right: 2rem;
+    text-transform: none;
+
+}
+
+.footer__form-butt{
+    --width-butt:10rem;
+    --height-butt:4.5rem;
+    --background-color-butt:var( --darkturquoise-color);
+}
+
+.footer__table{
+   display: grid;
+   grid-template-columns: 3fr 1fr 1fr 1fr;
+   gap: 3rem;
+   
+   padding: 3.5rem 3rem;
+   background-color: var(--white-color);
+
+   margin-top: 4rem;
+}
+.footer__item-img{
+    width: 15rem;
+}
+
+.footer__item-paragraph{
+    margin: 2.5rem 0;
+    line-height: 2.5rem;
+    text-align: justify;
+}
+
+.footer__item-media i
+{
+    font-size: 2.4rem;
+    color: var(--black-color);
+    opacity: 0.7;
+    margin-right: 2rem;
+
+    cursor: pointer;
+}
+.footer__item-introduce h3{
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 3.5rem;
+  
+    color: var(--dimgray-color);
+}
+.footer__item-introduce li{
+    font-size: 1.4rem;
+    color: var(--darkgray-color);
+    line-height: 2.5rem;
+    opacity: 0.9;
+}
+.footer__item-introduce i{
+    margin-right: 1rem;
+}
+
+.footer__description-wrap{
+    justify-content: space-between;
+
+    padding: 2rem;
+    background-color: var( --darkturquoise-color);
+}
+.footer__description{
+    font-size: 1.2rem;
+    color: var(--white-color);
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}

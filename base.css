@@ -1,0 +1,403 @@
+
+
+/*      ----------    Color use in page  ---------------             */
+:root{
+    --white-color:#ffffff;
+    --whitesmoke-color:#f1f1f1;
+    --black-color: #000;
+    --gray-color:#7e797e;
+    --dimgray-color:#555555;
+    --snow-color: #f9f9f9;
+    --darkgray-color:#a3a3a3;
+    --salmon-color:#f77174;   
+    --mediumorchid:#ba71da;
+    --lightseagreen:#1bbc9b;
+    --darkturquoise-color:#14b9d5;
+    --gold-color:#ffd205;
+    --salmon-color:#f76570;
+    --mediumorchid-color:#ba71da;
+    --sandybrown-color: #f3a46b;
+    --gainsboro-color: #eee;
+    --lightseagreen-color:#13b0cb;
+}
+*{
+    box-sizing:inherit;
+    padding: 0;
+    margin: 0;
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+}
+html ul{
+    list-style: none;
+}
+html a{
+    text-decoration: none;
+}
+html button, html input{
+    outline: none;
+    border: none;
+}
+
+.clear{
+    clear: both;
+}
+/*  -----------------  layout ----------------------------- */
+.wrap{
+    width: 117rem;
+    max-width: 100%;
+    margin: 0 auto;
+    }
+
+
+/*  -----------------  grid----------------------------- */
+.grid{
+        /*var about number column  */
+    --number-column: 3;
+
+    display: grid;
+    grid-template-columns: repeat(var(--number-column), 1fr);
+    
+        /* var gap of column */
+    --gap-column: 3.2rem;
+    gap:var( --gap-column) ;
+    }
+
+
+    /*  -----------------  flex----------------------------- */
+.flex{
+    display: flex;
+        
+        /* --------change aligns-items with justify-content---------- */
+    justify-content: center;
+    align-items: center;
+
+    }
+    /*  -----------------  modal----------------------------- */
+.modal{
+     position: fixed;
+     z-index: 5555;
+     inset: 0 0 0 0;
+     background-color: rgba(0, 0, 0, 0.05);
+
+     display: none;
+         }
+
+    /*  -----------------  animation----------------------------- */
+
+    @keyframes fadeIn{
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }   
+      /*  ----------------- heading ----------------------------- */
+
+     .heading{
+          width: 100%;
+      }
+      
+    .heading__title{
+        
+        font-size: 5rem;
+        font-weight: 700;
+        line-height: 5rem;
+        letter-spacing: 0.1rem;
+        text-transform: capitalize;
+        
+        margin-top: 1rem;
+        display: inline-block;
+        color: var(--black-color);
+
+        z-index: 1111;
+    }
+    .over-line{
+          position: relative;
+      }
+
+      .over-line::after {
+        content:"";
+
+        z-index: -999;
+        position: absolute;
+        bottom:1rem;
+        left:0;
+        
+       
+        background-color: var(--black-color);
+        
+        width: 100%;
+        height: 0.5rem;
+      }
+      
+    .heading__description{
+         
+        font-size: 2rem;
+        letter-spacing: 0.3rem;
+        text-transform: uppercase;
+         
+        color: var(--black-color);
+        
+      }
+
+     .heading__title-country {
+        margin-top: 0.5rem;
+        font-size: 2rem;
+        color: var(--dimgray-color);
+        line-height: 1;
+    }
+    /*  ----------------- country places ----------------------------- */
+    
+    .heading__title-place {
+        font-size: 1.5rem;
+        line-height: 1;
+        margin: 1rem 0 2rem;
+        text-transform: capitalize;
+        color: var(--darkgray-color);
+    }
+
+    .paragraph {
+        font-size: 1.4rem;
+        letter-spacing: 0.1rem;
+        text-align: justify;
+
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        
+        --number-line: 4;
+        -webkit-line-clamp: var(--number-line);
+        overflow: hidden;
+        
+        color: var(--darkgray-color);
+        
+        margin: 2rem 0;
+    }
+    /*  ----------------- Button ----------------------------- */
+
+.butt{
+      /*var for background-color, width, color button  */
+    --width-butt:13rem;
+    --height-butt:3rem;
+    --background-color-butt:#fff;
+    --color-butt:#fff;
+
+    min-width:var(--width-butt) ;
+    min-height: var(--height-butt);
+
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    font-size: 1.4rem;
+    border-radius: 3rem;
+    border: none;
+    padding: 0 2rem;
+
+    color: var(--color-butt);
+    background-color: var( --background-color-butt);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+} 
+
+/* ------------------------------icons--------------------------------------------- */
+
+.places-icon{
+    color: var(--darkgray-color);
+}
+
+/* --------------------------sub-navigation--------------------------------- */
+
+.sub-nav{
+    z-index: 9999;
+    position: absolute;
+    top: 6rem;
+    left: 1rem;
+    min-width:20rem;
+
+    box-shadow: 0 0.1rem 0.5rem 0.05rem #ccc;
+
+    background-color: var(--white-color);
+
+    display: none;
+    animation:  fadeIn linear 0.1s;
+}
+
+.sub-nav::after{
+    position:absolute;
+    top:-1.5rem; left:0;
+    content:"";
+    width:100%;
+    height:20px;
+
+    background-color: transparent;
+  
+}
+.sub-nav__item{
+    border-bottom:0.1rem solid var(--whitesmoke-color);
+}
+
+.sub-nav:last-child {
+  border:none;
+
+}
+
+.sub-nav__link{
+    display:block;
+
+    color: var(--darkgray-color);
+
+    font-size: 1.4rem;
+    padding: 1.5rem 2.5rem;
+    letter-spacing:0.2rem;
+}
+
+.sub-nav__link:hover{
+    background-color: #F9F9F9;
+}
+
+.brand{
+    font-size: 1rem;
+    text-transform:uppercase;
+    padding: 0.1rem 0.6rem;
+    border-radius: 0.3rem; color: var(--white-color); 
+    margin-left: 1rem;
+}
+.right-open-icon{
+    margin-left: 1.5rem;
+}
+
+.sub-nav-child {
+    z-index: 999;
+    display: none;
+    left: calc(100% + 2.5rem);
+    
+    /* var top adjust sub-nav-child */
+    --top-sub-nav-child:40%;
+    top: var(--top-sub-nav-child);
+    }
+.sub-nav-child::after {
+    content: "";
+    width: 2.5rem;
+    height: 40%;
+    background-color: transparent;
+    left: -25px;
+    top: 0;
+}
+
+/* -----------------------------------card-package------------------------------------------- */
+.card{
+    min-width: 26.5rem ;
+    
+    position: relative;
+   
+}
+.card__img{
+    padding-top: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.card__wrap{
+    z-index: 9999;
+    padding: 3rem;
+
+    position: absolute;
+    inset: 0 0 0 0;
+
+   background-image: linear-gradient( to top, rgba(0, 0 , 0, 0.3),rgba(0, 0 , 0, 0.000001) );
+}
+.card__logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+        
+    padding: 3rem;
+    background-color: transparent;
+}
+.card__logo-img{
+    width: 3.5rem;
+}
+
+.card__content{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    padding: 0 3rem 3rem;
+
+    color: var(--white-color) ;
+  
+}
+.card__title{
+    font-size: 2rem;
+    font-weight: 700; 
+}
+
+.card__ticket{
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+}
+
+/* -----------------------card__view------------------------------ */
+.card:hover .card__view{
+    display: flex;
+}
+.card__view{
+    position: absolute;
+    z-index: 10000;
+    inset: 0 0 0 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color:var(--darkturquoise-color) ;
+    color: var(--white-color);
+
+    animation: fadeIn linear 0.5s;
+    display: none;
+}
+
+.card__view-title{
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 900;
+}
+
+.card__view-places{
+    text-align: center;
+    margin: 16px 0;
+  
+}
+.card__view-places-item-link{
+    font-size: 14px;
+    line-height: 1.6;
+    letter-spacing: 1px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.card__butt-view{
+    --background-color-butt:var(--white-color);
+    --color-butt:var(--darkturquoise-color);
+   
+}
+
+/* -----------------limit-line----------------------------------------------- */
+.limit-line{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    
+    --number-line: 3;
+    -webkit-line-clamp: var(--number-line);
+}
+/* ----------------------------------------------------------------------------- */
+
