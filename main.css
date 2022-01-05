@@ -357,8 +357,8 @@ input.show-menu:checked  ~ .menu-expand{
 
 /*  ----------------- content__1-OUR DESTINATIONS  ----------------------------- */
 
-.list-places{
-    padding:7.6rem;
+.list-places {
+    padding: 7.6rem 3.2rem;
 }
 
 .list-places__heading{
