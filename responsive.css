@@ -1,7 +1,7 @@
 
 /* -------------------PC------------------------- */
 
-@media screen and  (min-width: 1024px) {
+@media screen and  (min-width: 64em) {
         
         .header__responsive{
             display: none;
@@ -10,7 +10,7 @@
 
 /* -------------------TABLET_MOBILE--------------------- */
 
-    @media screen and (max-width: 1023px) {
+    @media screen and (max-width:  63.9375em) {
       /* ----------------header--------------- */   
        
         .header{
@@ -228,7 +228,7 @@
     }
 /* -------------------TABLET--------------------- */
  
-@media screen and   (max-width: 1023px) and (min-width: 740px) {
+@media screen and   (max-width:  63.9375em) and (min-width: 46.25em) {
       /* ----------------header--------------- */   
         
       .header__responsive-nav{
@@ -287,7 +287,7 @@
 
     /* -------------------MOBILE---------------------- */
  
-@media screen and  (max-width : 739px) {
+@media screen and  (max-width : 46.1875em) {
       /* ----------------header--------------- */
         .header__responsive-nav{
             width: 75vw;
